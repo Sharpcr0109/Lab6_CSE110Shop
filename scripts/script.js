@@ -10,7 +10,6 @@ window.addEventListener('DOMContentLoaded', () => {
     .then(data => localStorage.setItem("productItems", JSON.stringify(data)))
     .then(populateItems);
   } else {
-    // console.log("items found: ");
     console.log(JSON.parse(localStorage.getItem("productItems")).length);
     populateItems();
     console.log(localStorage.getItem("cartItems"));
@@ -31,5 +30,4 @@ function populateItems() {
     item.setAttribute("id", element.id);
     productList.appendChild(item);
   });
-  // console.log(items[1]);
 }
